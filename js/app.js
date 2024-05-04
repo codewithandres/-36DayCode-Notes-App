@@ -11,7 +11,7 @@ const addBox = document.querySelector('.add-box'),
 const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 // Recupera las notas almacenadas en el localStorage o inicializa un arreglo vacío si no hay ninguna
-const notes = JSON.parse(localStorage.getItem('notes') || ['']);
+const notes = JSON.parse(localStorage.getItem('notes') || '[]');
 
 // Define variables para controlar si se está actualizando una nota y cuál es el ID de la nota a actualizar
 let isUpdate = false, updateID;
@@ -80,7 +80,7 @@ addButton.addEventListener('click', (e) => {
             isUpdate = false;
             notes[updateID] = infoNote;
         };
-        notes = [];
+
         // Almacena las notas en el localStorage
         localStorage.setItem('notes', JSON.stringify(notes));
 
