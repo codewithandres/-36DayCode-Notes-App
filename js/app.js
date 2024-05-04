@@ -80,7 +80,7 @@ addButton.addEventListener('click', (e) => {
             isUpdate = false;
             notes[updateID] = infoNote;
         };
-
+        notes = [];
         // Almacena las notas en el localStorage
         localStorage.setItem('notes', JSON.stringify(notes));
 
